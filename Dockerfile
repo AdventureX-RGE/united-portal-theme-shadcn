@@ -1,15 +1,12 @@
 FROM node:latest
 
-WORKDIR /
+WORKDIR /app
 
-# Copy workspace configuration
-COPY package.json bun.lockb* ./
-
-# Install all dependencies (workspace + portal)
-RUN npm i -g bun && bun install --frozen-lockfile
-
-# Copy the entire source code
+# Copy source code (before installing dependencies)
 COPY . .
+
+# Install bun and dependencies
+RUN npm i -g bun && bun install --frozen-lockfile
 
 # Build the portal app
 RUN npx modern deploy
