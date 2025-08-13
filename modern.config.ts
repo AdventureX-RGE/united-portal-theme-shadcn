@@ -12,7 +12,7 @@ export default defineConfig({
     },
   },
   output: {
-    assetPrefix: 'http://127.0.0.1:41000',
+    assetPrefix: process.env.PROVIDER_PUBLIC_URL,
   },
   plugins: [
     appTools({
