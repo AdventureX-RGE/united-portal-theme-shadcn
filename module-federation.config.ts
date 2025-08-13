@@ -2,7 +2,10 @@ import { createModuleFederationConfig } from '@module-federation/modern-js';
 
 export default createModuleFederationConfig({
   name: 'provider',
-  filename: 'remoteEntry.js',
+  filename: 'static/remoteEntry.js',
+  manifest: {
+    filePath: 'static',
+  },
   exposes: {
     './Image': './src/components/Image.tsx',
   },
