@@ -15,8 +15,5 @@ export default createModuleFederationConfig({
       singleton: true,
       requiredVersion: '^18.0.0',
     },
-    '@modern-js/runtime': {
-      singleton: true,
-    },
   },
 });
