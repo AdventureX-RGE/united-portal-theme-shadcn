@@ -9,7 +9,7 @@ COPY . .
 RUN npm i -g bun && bun install --frozen-lockfile
 
 # Build the portal app
-RUN npx modern deploy
+RUN npx modern build
 
 # Expose port
 EXPOSE 8080
@@ -18,4 +18,4 @@ EXPOSE 8080
 ENV NODE_ENV=production
 
 # Start the application
-CMD ["node", ".output/index"]
+CMD ["npx", "modern", "start"]

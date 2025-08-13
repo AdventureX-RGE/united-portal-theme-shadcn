@@ -11,9 +11,6 @@ export default defineConfig({
       mode: 'stream',
     },
   },
-  output: {
-    assetPrefix: 'http://127.0.0.1:41000',
-  },
   plugins: [
     appTools({
       bundler: 'rspack', // Set to 'webpack' to enable webpack
