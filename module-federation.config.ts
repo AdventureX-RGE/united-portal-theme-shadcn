@@ -7,7 +7,7 @@ export default createModuleFederationConfig({
     filePath: 'static',
   },
   exposes: {
-    './Image': './src/components/Image.tsx',
+    './TextField': './src/components/textfield.tsx',
   },
   shared: {
     react: {
